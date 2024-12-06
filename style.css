@@ -2,11 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: url('floresta.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
 }
 
 header {
-    background-color: #0d7e20;
+    background: rgba(13, 126, 32, 0.8);
     color: white;
     padding: 15px 0;
     text-align: center;
@@ -14,6 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    position: relative;
 }
 
 .header-container {
@@ -52,19 +55,27 @@ form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-form input {
-    width: 100%;
-    padding: 8px;
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
     margin-bottom: 10px;
+}
+
+.form-row label {
+    flex: 1;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-row input {
+    flex: 1;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -92,6 +103,7 @@ footer {
     padding: 20px 0;
     position: relative;
     margin-top: 20px;
+    border-radius: 20px;
 }
 
 footer ul {

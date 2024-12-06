@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background: url('floresta.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
 }
 
 nav {
-    background-color: #0d7e20;
+    background-color: rgba(13, 126, 32, 0.9);
     padding: 10px 0;
 }
 
@@ -39,6 +40,11 @@ nav ul li a:hover {
 .container {
     text-align: center;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -79,7 +85,7 @@ h3 {
 }
 
 p {
-    color: rgb(255, 255, 255);
+    color: #333;
     font-size: 0.9em;
 }
 

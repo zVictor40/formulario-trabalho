@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORMULARIOCARTAO</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -20,46 +20,69 @@
                 </ul>
             </nav>
         </div>
-    </header>    
+    </header>
 
     <main>
-        <form action="segundo.html" method="post" enctype="multipart/form-data">
-            
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" required><br>
+        <form action="dados.php" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
 
-            <label for="cartao">Número do Cartão de Crédito:</label>
-            <input type="number" id="cartao" name="cartao" required><br>
+            <div class="form-row">
+                <label for="cartao">Número do Cartão de Crédito:</label>
+                <input type="number" id="cartao" name="cartao" required>
+            </div>
 
-            <label for="validade">Data de Validade (MM/AA):</label>
-            <input type="month" id="validade" name="validade" required><br>
+            <div class="form-row">
+                <label for="validade">Data de Validade (MM/AA):</label>
+                <input type="month" id="validade" name="validade" required>
+            </div>
 
-            <label for="cvv">Código de Segurança (CVV):</label>
-            <input type="password" id="cvv" name="cvv" pattern="\d{3}" required><br>
+            <div class="form-row">
+                <label for="cvv">Código de Segurança (CVV):</label>
+                <input type="password" id="cvv" name="cvv" pattern="\d{3}" required>
+            </div>
 
-            <label for="endereco">Endereço Completo:</label>
-            <input type="text" id="endereco" name="endereco" required><br>
+            <div class="form-row">
+                <label for="endereco">Endereço Completo:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required><br>
+            <div class="form-row">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required><br>
+            <div class="form-row">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
 
-            <label for="data_nascimento">Data de Nascimento:</label>
-            <input type="date" id="data_nascimento" name="data_nascimento" required><br>
+            <div class="form-row">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+            </div>
 
-            <label for="aceitar_termos">Aceito os Termos e Condições:</label>
-            <input type="checkbox" id="aceitar_termos" name="aceitar_termos" required><br>
+            <div class="form-row">
+                <label for="aceitar_termos">Aceito os Termos e Condições:</label>
+                <input type="checkbox" id="aceitar_termos" name="aceitar_termos" required>
+            </div>
 
-            <label for="arquivo">Upload da sua Identidade:</label>
-            <input type="file" id="arquivo" name="arquivo"><br>
+            <div class="form-row">
+                <label for="arquivo">Upload da sua Identidade:</label>
+                <input type="file" id="arquivo" name="arquivo">
+            </div>
 
-            <label for="quantidade">Qualidade do nosso serviço: </label>
-            <input type="range" id="quantidade" name="quantidade" min="1" max="10"><br>
+            <div class="form-row">
+                <label for="quantidade">Qualidade do nosso serviço:</label>
+                <input type="range" id="quantidade" name="quantidade" min="1" max="10">
+            </div>
 
-            <input type="reset" value="Resetar">
-            <input type="submit" value="Cadastrar">
+            <div class="form-row">
+                <input type="reset" value="Resetar">
+                <input type="submit" value="Cadastrar">
+            </div>
         </form>
     </main>
 
