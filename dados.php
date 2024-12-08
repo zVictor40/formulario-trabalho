@@ -7,7 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background: url('floresta.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #333;
             margin: 0;
             padding: 0;
@@ -16,13 +17,14 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         h1 {
-            color: #007BFF;
+            color: write;
             text-align: center;
+            font-size: 1.8rem;
         }
         p {
             font-size: 1.1rem;
@@ -33,27 +35,94 @@
             color: #0056b3;
         }
         footer {
-    background-color: #0d7e20;
-    color: rgb(253, 253, 253);
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    margin-top: 20px;
-    border-radius: 40px;
+            background-color: #0d7e20;
+            color: rgb(253, 253, 253);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-radius: 40px;
+        }
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer ul li {
+            margin: 5px 0;
+        }
+        header {
+        background: rgba(13, 126, 32, 0.9);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-bottom: 3px solid #0d7e20;
+    }
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px 20px;
 }
 
-footer ul {
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    flex: 2;
+}
+
+header .logo img {
+    max-width: 80px;
+    height: auto;
+    margin-right: 20px;
+    display: block;
+}
+
+nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
-footer ul li {
-    margin: 5px 0;
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ff6a;
 }
 
     </style>
 </head>
 <body>
+    <header>
+        <div class="header-container">
+            <h1>Verifique as Informações do Seu Cartão</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="dados.php">Canal de um professor gente boa demais!</a></li>
+                    <li><a href="segundo.html">Sobre os Desenvolvedores</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="container">
         <?php
             $nome = htmlspecialchars($_POST["nome"]);
@@ -66,23 +135,8 @@ footer ul li {
             $data_nascimento = htmlspecialchars($_POST["data_nascimento"]);
             $aceitar_termos = isset($_POST["aceitar_termos"]) ? "Sim" : "Não";
             $quantidade = htmlspecialchars($_POST["quantidade"]);
-            if (isset($_FILES["arquivo"]) && $_FILES["arquivo"]["error"] == 0) {
-                $arquivo = $_FILES["arquivo"]["name"];
-            } else {
-                $arquivo = "Nenhum arquivo enviado.";
-            }
+            $arquivo = (isset($_FILES["arquivo"]) && $_FILES["arquivo"]["error"] == 0) ? $_FILES["arquivo"]["name"] : "Nenhum arquivo enviado.";
         ?>
-         <header>
-        <div class="header-container">
-            <h1>Verifique as Informações do Seu Cartão</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Página Inicial</a></li>
-                    <li><a href="dados.php">Enviar Meus Dados</a></li>
-                    <li><a href="segundo.html">Sobre os Desenvolvedores</a></li>
-                </ul>
-            </nav>
-        </div>
         <h1>Resultado do Processamento</h1>
         <p>Seu nome: <span class="highlight"><?php echo $nome; ?></span></p>
         <p>Seu cartão: <span class="highlight"><?php echo $cartao; ?></span></p>
