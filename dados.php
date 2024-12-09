@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado do Processamento</title>
+    <title>Sucess! entraremos em contato em breve!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -113,7 +113,7 @@ nav ul li a:hover {
 <body>
     <header>
         <div class="header-container">
-            <h1>Verifique as Informações do Seu Cartão</h1>
+            <h1>Sucesso, entraremos em contato em breve</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Página Inicial</a></li>
@@ -137,7 +137,7 @@ nav ul li a:hover {
             $quantidade = htmlspecialchars($_POST["quantidade"]);
             $arquivo = (isset($_FILES["arquivo"]) && $_FILES["arquivo"]["error"] == 0) ? $_FILES["arquivo"]["name"] : "Nenhum arquivo enviado.";
         ?>
-        <h1>Resultado do Processamento</h1>
+        <h1>Suas informações:</h1>
         <p>Seu nome: <span class="highlight"><?php echo $nome; ?></span></p>
         <p>Seu cartão: <span class="highlight"><?php echo $cartao; ?></span></p>
         <p>Validade: <span class="highlight"><?php echo $validade; ?></span></p>

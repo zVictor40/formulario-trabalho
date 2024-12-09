@@ -85,13 +85,13 @@ h3 {
 }
 
 p {
-    color: #333;
+    color: #000000;
     font-size: 0.9em;
 }
 
 footer {
     background-color: #0d7e20;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px 0;
     position: relative;
@@ -106,4 +106,4 @@ footer ul {
 footer ul li {
     margin: 5px 0;
 }
- 
+  
