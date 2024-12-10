@@ -55,7 +55,7 @@ h1 {
 .developers {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 40px; 
 }
 
 .developer {
